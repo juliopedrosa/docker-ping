@@ -1,4 +1,3 @@
 #!/bin/sh
-echo ping ${HOSTNAME:=localhost} every ${TIMEOUT:=300} sec
 
-while true; do ping -c 1 ${HOSTNAME} | sed -e "1,$ s/^/     /" | sed "s/%//g"  ;sleep ${TIMEOUT}; done;
+while true; do ping -c 1 ${HOSTNAME} | sed -e "1,$ s/^/     /" | sed "s/%//g" | tail -n 3 | sed "s#/# #g" ;sleep ${TIMEOUT}; done;
