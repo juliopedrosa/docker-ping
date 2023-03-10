@@ -9,7 +9,7 @@
 ...
 services:
   ping:
-    image: willfarrell/ping
+    image: jpedrosa/docker-ping
     environment:
       HOSTNAME: "10.0.0.61"
       TIMEOUT: 300
